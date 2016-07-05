@@ -580,29 +580,29 @@ ARM Macro Assembler    Page 9
               00000000 
 Command Line: --debug --xref --diag_suppress=9931 --cpu=Cortex-M4.fp --apcs=int
 erwork --depend=.\_build\arm_startup_nrf52.d -o.\_build\arm_startup_nrf52.o -IC
-:\Èí¼þ\DOC\tech\software\nordickSdk\nRF5_SDK_11.0.0_89a8197\examples\ble_periph
-eral\ble_app_rscs\pca10040\s132\arm5_no_packs\RTE -IC:\Keil_v5\ARM\PACK\ARM\CMS
-IS\4.5.0\CMSIS\Include -IC:\Keil_v5\ARM\PACK\NordicSemiconductor\nRF_DeviceFami
+:\Development\source\vsteam_embeded_sw\application\ble_peripheral\ble_app_rscs\
+pca10040\s132\arm5_no_packs\RTE -IC:\Keil_v5\ARM\PACK\ARM\CMSIS\4.5.0\CMSIS\Inc
+lude -IC:\Keil_v5\ARM\PACK\NordicSemiconductor\nRF_DeviceFamilyPack\8.5.0\Devic
 
 
 
 ARM Macro Assembler    Page 10 
 
 
-lyPack\8.5.0\Device\Include -IC:\Keil_v5\ARM\PACK\NordicSemiconductor\nRF_Devic
-eFamilyPack\8.6.1\Device\Include --predefine="__MICROLIB SETA 1" --predefine="_
-_UVISION_VERSION SETA 515" --predefine="_RTE_ SETA 1" --predefine="NRF52 SETA 1
-" --predefine="BLE_STACK_SUPPORT_REQD SETA 1" --predefine="BOARD_PCA10040 SETA 
-1" --predefine="NRF52_PAN_12 SETA 1" --predefine="NRF52_PAN_15 SETA 1" --predef
-ine="NRF52_PAN_20 SETA 1" --predefine="NRF52_PAN_30 SETA 1" --predefine="NRF52_
-PAN_31 SETA 1" --predefine="NRF52_PAN_36 SETA 1" --predefine="NRF52_PAN_51 SETA
- 1" --predefine="NRF52_PAN_53 SETA 1" --predefine="NRF52_PAN_54 SETA 1" --prede
-fine="NRF52_PAN_55 SETA 1" --predefine="NRF52_PAN_58 SETA 1" --predefine="NRF52
-_PAN_62 SETA 1" --predefine="NRF52_PAN_63 SETA 1" --predefine="NRF52_PAN_64 SET
-A 1" --predefine="CONFIG_GPIO_AS_PINRESET SETA 1" --predefine="S132 SETA 1" --p
-redefine="NRF_LOG_USES_UART SETA 1" --predefine="NRF52 SETA 1" --predefine="SOF
-TDEVICE_PRESENT SETA 1" --predefine="SWI_DISABLE0 SETA 1" --list=.\_build\arm_s
-tartup_nrf52.lst RTE\Device\nRF52832_xxAA\arm_startup_nrf52.s
+e\Include -IC:\Keil_v5\ARM\PACK\NordicSemiconductor\nRF_DeviceFamilyPack\8.6.1\
+Device\Include --predefine="__MICROLIB SETA 1" --predefine="__UVISION_VERSION S
+ETA 515" --predefine="_RTE_ SETA 1" --predefine="NRF52 SETA 1" --predefine="BLE
+_STACK_SUPPORT_REQD SETA 1" --predefine="BOARD_PCA10040 SETA 1" --predefine="NR
+F52_PAN_12 SETA 1" --predefine="NRF52_PAN_15 SETA 1" --predefine="NRF52_PAN_20 
+SETA 1" --predefine="NRF52_PAN_30 SETA 1" --predefine="NRF52_PAN_31 SETA 1" --p
+redefine="NRF52_PAN_36 SETA 1" --predefine="NRF52_PAN_51 SETA 1" --predefine="N
+RF52_PAN_53 SETA 1" --predefine="NRF52_PAN_54 SETA 1" --predefine="NRF52_PAN_55
+ SETA 1" --predefine="NRF52_PAN_58 SETA 1" --predefine="NRF52_PAN_62 SETA 1" --
+predefine="NRF52_PAN_63 SETA 1" --predefine="NRF52_PAN_64 SETA 1" --predefine="
+CONFIG_GPIO_AS_PINRESET SETA 1" --predefine="S132 SETA 1" --predefine="NRF_LOG_
+USES_UART SETA 1" --predefine="NRF52 SETA 1" --predefine="SOFTDEVICE_PRESENT SE
+TA 1" --predefine="SWI_DISABLE0 SETA 1" --list=.\_build\arm_startup_nrf52.lst R
+TE\Device\nRF52832_xxAA\arm_startup_nrf52.s
 
 
 

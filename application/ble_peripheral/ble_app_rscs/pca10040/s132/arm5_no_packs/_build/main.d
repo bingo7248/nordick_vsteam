@@ -65,3 +65,7 @@
 .\_build\main.o: ..\..\..\..\..\bsp\bsp.h
 .\_build\main.o: ..\..\..\..\..\..\components\libraries\button\app_button.h
 .\_build\main.o: ..\..\..\..\..\bsp\bsp_btn_ble.h
+.\_build\main.o: ..\..\..\..\..\..\components\drivers_nrf\delay\nrf_delay.h
+.\_build\main.o: ..\..\..\..\..\..\components\ble\ble_services\ble_dfu\ble_dfu.h
+.\_build\main.o: ..\..\..\..\..\..\components\libraries\bootloader_dfu\dfu_app_handler.h
+.\_build\main.o: ..\..\..\..\..\..\components\libraries\bootloader_dfu\bootloader_types.h
