@@ -51,6 +51,10 @@
 #include "dfu_app_handler.h"
 #endif // BLE_DFU_APP_SUPPORT
 
+#ifdef BLE_DATA_SYNC_SUPPORT
+#include "ble_data_sync.h"
+#endif //BLE_DATA_SYNC_SUPPORT
+
 #define IS_SRVC_CHANGED_CHARACT_PRESENT 1                                          /**< Include or not the service_changed characteristic. if not enabled, the server's database cannot be changed for the lifetime of the device*/
 
 #define CENTRAL_LINK_COUNT              0                                          /**< Number of central links used by the application. When changing this number remember to adjust the RAM settings*/
@@ -152,6 +156,10 @@ static ble_uuid_t m_adv_uuids[] = {{BLE_UUID_RUNNING_SPEED_AND_CADENCE,  BLE_UUI
 static ble_dfu_t                         m_dfus;                                    /**< Structure used to identify the DFU service. */
 #endif // BLE_DFU_APP_SUPPORT
 
+#ifdef BLE_DATA_SYNC_SUPPORT
+static ble_data_sync_t									m_data_syncs;																/**< Structure used to identify the data sync service. */
+#endif //BLE_DATA_SYNC_SUPPORT
+																	 
 /**@brief Callback function for asserts in the SoftDevice.
  *
  * @details This function will be called in case of an assert in the SoftDevice.
@@ -502,6 +510,17 @@ static void services_init(void)
     /** @snippet [DFU BLE Service initialization] */
 #endif // BLE_DFU_APP_SUPPORT		
 		
+#ifdef BLE_DATA_SYNC_SUPPORT
+		ble_data_sync_init_t		data_syncs_init;
+		
+		memset(&data_syncs_init, 0, sizeof(data_syncs_init));
+		
+		data_syncs_init.revision = 0X02;
+		
+		err_code = ble_data_sync_init(&m_data_syncs, &data_syncs_init);
+    APP_ERROR_CHECK(err_code);
+	  
+#endif
 }
 
 
@@ -705,6 +724,12 @@ static void ble_evt_dispatch(ble_evt_t * p_ble_evt)
     ble_dfu_on_ble_evt(&m_dfus, p_ble_evt);
     /** @snippet [Propagating BLE Stack events to DFU Service] */
 #endif // BLE_DFU_APP_SUPPORT
+
+	#ifdef BLE_DATA_SYNC_SUPPORT
+    /** @snippet [Propagating BLE Stack events to data sync Service] */
+    ble_data_sync_on_ble_evt(&m_data_syncs, p_ble_evt);
+    /** @snippet [Propagating BLE Stack events to data sync Service] */
+#endif // BLE_DATA_SYNC_SUPPORT
 }
 
 

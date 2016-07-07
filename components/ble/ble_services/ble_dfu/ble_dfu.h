@@ -32,6 +32,7 @@
 #include "ble_gap.h"
 #include "ble.h"
 #include "ble_srv_common.h"
+#include "vsteam_type.h"
 
 #define BLE_DFU_SERVICE_UUID                 0x1530                       /**< The UUID of the DFU Service. */
 #define BLE_DFU_PKT_CHAR_UUID                0x1532                       /**< The UUID of the DFU Packet Characteristic. */

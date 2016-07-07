@@ -465,7 +465,7 @@ uint32_t ble_dfu_init(ble_dfu_t * p_dfu, ble_dfu_init_t * p_dfu_init)
 
     ble_uuid_t service_uuid;
     uint32_t   err_code;
-
+/*
     const ble_uuid128_t base_uuid128 =
     {
         {
@@ -473,10 +473,11 @@ uint32_t ble_dfu_init(ble_dfu_t * p_dfu, ble_dfu_init_t * p_dfu_init)
             0xDE, 0xEF, 0x12, 0x12, 0x00, 0x00, 0x00, 0x00
         }
     };
-
+		*/
+		ble_uuid128_t     base_uuid = VSTEAM_BLE_BASE_UUID;
     service_uuid.uuid = BLE_DFU_SERVICE_UUID;
 
-    err_code = sd_ble_uuid_vs_add(&base_uuid128, &(service_uuid.type));
+    err_code = sd_ble_uuid_vs_add(&base_uuid, &(service_uuid.type));
     VERIFY_SUCCESS(err_code);
 
     err_code = sd_ble_gatts_service_add(BLE_GATTS_SRVC_TYPE_PRIMARY,
